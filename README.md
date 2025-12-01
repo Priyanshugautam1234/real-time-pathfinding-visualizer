@@ -1,52 +1,62 @@
-🚀 Real-Time Pathfinding Visualizer
+# 🚀 Real-Time Pathfinding Visualizer
 
-A high-performance C++ + WebSocket powered pathfinding engine with modern real-time visualization in HTML-Canvas.
+A high-performance **C++ + WebSocket** powered pathfinding engine with modern real-time visualization using **HTML Canvas**.
 
-📌 Overview
+---
 
-This project is an end-to-end real-time pathfinding visualizer that streams algorithm progress directly from a C++ backend to a modern Web UI using WebSockets.
+## 🔍 Overview
 
-It supports BFS, Dijkstra, and A* with live animation, adjustable speed, and dynamic coloring of visited nodes & shortest paths.
+This project is an end-to-end real-time pathfinding visualizer that streams algorithm progress directly from a **C++ backend** to a modern **Web UI** using WebSockets.
 
-This tool is ideal for:
-✔ Algorithm visualization
-✔ Educational demos
-✔ System design understanding
-✔ Research experiments
+It supports **BFS**, **Dijkstra**, and **A\*** with:
 
-✨ Features
-🔶 Algorithms Supported
+- Live animated exploration  
+- Adjustable speed  
+- Dynamic coloring of visited nodes  
+- Highlighted final shortest path  
 
-A* Pathfinding
+This tool is ideal for:  
+✔ Algorithm visualization  
+✔ Educational demos  
+✔ System design understanding  
+✔ Research experiments  
 
-Dijkstra’s Algorithm
+---
 
-Breadth-First Search (BFS)
+## ✨ Features
 
-🔷 Real-Time Visualization
+### 🧠 Algorithms Supported
+- **A\*** Pathfinding  
+- **Dijkstra’s** Algorithm  
+- **Breadth-First Search (BFS)**  
 
-Live grid rendering via WebSocket frames
+---
 
-Node states shown with modern dynamic colors
+## 🎥 Real-Time Visualization
+- Live grid rendering via WebSocket frames  
+- Clear node states with modern color mapping  
+- Smooth animations with auto-throttling  
+- Final shortest path highlighted cleanly  
 
-Smooth animations with auto-throttling
+---
 
-Final shortest path highlighted clearly
+## ⚡ High-Performance C++ Engine
+- Fast grid computation  
+- Dynamic frame throttling  
+- No lag even at high frame rates  
+- Efficient memory use  
 
-⚡ High-Performance C++ Engine
+---
 
-Fast grid computation
+## 🎨 Modern Web UI
+- Glassmorphism-styled sidebar  
+- Canvas-based grid rendering  
+- Fully responsive control panel  
+- **Connect / Start / Stop / Speed Control** support  
 
-Dynamic frame-throttling for stability
+---
 
-No lag even at high frame rates
+## 📺 Demo (GIF)
 
-🎨 Modern Web UI
-
-Glassmorphism theme
-
-Canvas-based grid renderer
-
-Fully responsive control panel
-
-Run, Stop, Connect & Speed controls
+> Add your real execution GIF here  
+> Upload a GIF to `/assets/demo
