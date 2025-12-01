@@ -56,7 +56,3 @@ This tool is ideal for:
 
 ---
 
-## 📺 Demo (GIF)
-
-> Add your real execution GIF here  
-> Upload a GIF to `/assets/demo
