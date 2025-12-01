@@ -56,3 +56,54 @@ This tool is ideal for:
 
 ---
 
+## 🧰 Tech Stack
+
+### **🖥️ Backend (C++)**
+- C++17  
+- Custom grid-based pathfinding engine  
+- Algorithms: BFS, Dijkstra, A*  
+- nlohmann/json (single-header JSON serializer)  
+- Real-time state updates & shortest path computation  
+
+### **🔌 Communication Layer**
+- WebSockets (Python `websockets` library)  
+- asyncio event loop  
+- Live JSON frame streaming from C++ → Browser  
+- Optimized frame throttling for smooth performance  
+
+### **🌐 Frontend**
+- HTML5 Canvas (real-time grid rendering)  
+- Vanilla JavaScript (ES6)  
+- Modern Glassmorphism UI with custom CSS  
+- Interactive controls: Connect, Start, Stop, Speed, Algorithm  
+
+### **🐍 Python Middleware**
+- Python 3  
+- WebSocket server  
+- Manages C++ process execution  
+- Streams frames to multiple clients  
+- Handles START/STOP commands  
+
+### **🛠️ Build & Tools**
+- MinGW / g++ compiler  
+- CMake (project structure)  
+- Git & GitHub  
+- Windows terminal execution  
+
+---
+
+## 🛠️ How to Run
+-1️⃣ Start the WebSocket Server  python web_visualizer/live_server.py
+-2️⃣ Open the Live UI  start web_visualizer/live.html
+### **3️⃣ Run the Visualizer**
+-Select Algorithm → BFS / Dijkstra / A*
+-Select Speed → Slow / Medium / Fast
+-Press Connect WebSocket
+-Press Start Live
+
+---
+
+
+
+
+
