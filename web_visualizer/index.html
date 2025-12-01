@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Pathfinding Visualizer – Modern UI</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<style>
+/* ------------------------------
+   GLOBAL STYLES
+------------------------------ */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(135deg, #0d1b2a, #000814);
+    font-family: "Inter", Arial, sans-serif;
+    color: #d8e9ff;
+}
+
+/* ------------------------------
+   SIDEBAR (Glassmorphism)
+------------------------------ */
+#sidebar {
+    width: 280px;
+    padding: 20px;
+    backdrop-filter: blur(14px);
+    background: rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 4px 0 25px #000a;
+    border-radius: 0 12px 12px 0;
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Title */
+#sidebar h2 {
+    margin-top: 0;
+    text-shadow: 0 0 12px #4bc9ff88;
+}
+
+/* Labels, dropdowns, buttons */
+label, select, button, input[type="file"] {
+    width: 100%;
+    display: block;
+    margin-top: 12px;
+}
+
+select, button, input[type="file"] {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px;
+    padding: 10px;
+    color: #cfe9ff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Neon focus */
+select:focus, button:focus {
+    outline: none;
+    border-color: #4bc9ff;
+    box-shadow: 0 0 10px #4bc9ff66;
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(145deg, #112d4e, #0f1c2f);
+}
+button:hover {
+    background: linear-gradient(145deg, #1b3c64, #0d1625);
+    transform: translateY(-2px);
+}
+
+/* Small text */
+.small {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+hr {
+    border: 0.5px solid rgba(255,255,255,0.08);
+    margin: 20px 0;
+}
+
+/* ------------------------------
+   MAIN DISPLAY AREA
+------------------------------ */
+#main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Canvas card */
+canvas {
+    background: #061525;
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(0,255,255,0.15),
+                0 0 60px rgba(0,180,255,0.1);
+    padding: 6px;
+    animation: popIn 0.6s ease-out;
+}
+
+/* ------------------------------
+   ANIMATIONS
+------------------------------ */
+@keyframes fadeIn {
+    from { opacity:0; transform:translateX(-20px); }
+    to   { opacity:1; transform:translateX(0); }
+}
+
+@keyframes popIn {
+    from { opacity:0; transform: scale(0.95); }
+    to   { opacity:1; transform: scale(1); }
+}
+</style>
+
+</head>
+
+<body>
+
+  <div id="sidebar">
+    <h2>Pathfinding Visualizer</h2>
+
+    <p class="small">Real-time pathfinding algorithms with visual effects.</p>
+
+    <!-- LIVE CONTROL -->
+    <label>Algorithm:</label>
+    <select id="algo">
+      <option value="astar">A*</option>
+      <option value="dijkstra">Dijkstra</option>
+      <option value="bfs">BFS</option>
+    </select>
+
+    <label>Speed:</label>
+    <select id="speed">
+      <option value="fast">Fast</option>
+      <option value="medium">Medium</option>
+      <option value="slow">Slow</option>
+    </select>
+
+    <button id="connect">Connect WebSocket</button>
+    <button id="start">Start Live</button>
+    <button id="stop">Stop</button>
+
+    <p id="status" class="small">Status: Disconnected</p>
+
+    <hr>
+
+    <!-- PLAYBACK -->
+    <label>Load JSON Map File:</label>
+    <input id="file" type="file" accept=".json" />
+
+    <label>Cell Size:</label>
+    <select id="cellSize">
+      <option value="10">10</option>
+      <option value="14" selected>14</option>
+      <option value="18">18</option>
+    </select>
+
+    <button id="drawBtn">Draw Loaded Map</button>
+
+    <hr>
+
+    <p class="small"><strong>Legend</strong></p>
+    <div class="small">Start: <span style="color:lime">●</span></div>
+    <div class="small">Goal: <span style="color:red">●</span></div>
+    <div class="small">Walls: <span style="color:#a67c00">■</span></div>
+    <div class="small">Visited: <span style="color:#00b7ff">■</span></div>
+    <div class="small">Path: <span style="color:yellow">■</span></div>
+
+  </div>
+
+  <div id="main">
+    <canvas id="c"></canvas>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+  <script src="live_app.js"></script>
+
+</body>
+</html>

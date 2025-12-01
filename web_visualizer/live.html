@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Live Pathfinding Visualizer</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<style>
+/* Global Layout */
+body {
+    margin:0; padding:0;
+    height:100vh;
+    display:flex;
+    background: linear-gradient(135deg,#0d1b2a,#000814);
+    font-family: "Inter", Arial, sans-serif;
+    color:#d8e9ff;
+}
+
+/* Sidebar (Glassmorphism) */
+#sidebar {
+    width:280px;
+    padding:20px;
+    backdrop-filter:blur(14px);
+    background:rgba(255,255,255,0.06);
+    border-right:1px solid rgba(255,255,255,0.1);
+    box-shadow:4px 0 20px #000a;
+    border-radius:0 12px 12px 0;
+}
+
+#sidebar h2 {
+    margin-top:0;
+    text-shadow:0 0 12px #4bc9ff88;
+}
+
+/* Controls */
+label, select, button {
+    width:100%;
+    display:block;
+    margin-top:10px;
+}
+
+select, button {
+    padding:10px;
+    border-radius:6px;
+    background:rgba(255,255,255,0.07);
+    border:1px solid rgba(255,255,255,0.15);
+    color:#cfe9ff;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+/* Buttons */
+button:hover {
+    background:rgba(255,255,255,0.12);
+    transform:translateY(-2px);
+}
+
+/* Status text */
+#status {
+    margin-top:12px;
+    font-size:14px;
+    opacity:0.85;
+}
+
+/* Canvas Area */
+#main {
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+}
+
+canvas {
+    background:#061525;
+    border-radius:14px;
+    box-shadow:
+      0 0 25px rgba(0,255,255,0.08),
+      0 0 55px rgba(0,160,255,0.06);
+}
+</style>
+</head>
+
+<body>
+
+<div id="sidebar">
+    <h2>Live Pathfinding</h2>
+
+    <label>Algorithm:</label>
+    <select id="algo">
+        <option value="astar" selected>A*</option>
+        <option value="dijkstra">Dijkstra</option>
+        <option value="bfs">BFS</option>
+    </select>
+
+    <label>Speed:</label>
+    <select id="speed">
+        <option value="fast" selected>Fast</option>
+        <option value="medium">Medium</option>
+        <option value="slow">Slow</option>
+    </select>
+
+    <button id="connect">Connect WebSocket</button>
+    <button id="start">Start Live</button>
+    <button id="stop">Stop</button>
+
+    <div id="status">Status: Disconnected</div>
+</div>
+
+<div id="main">
+    <canvas id="c"></canvas>
+</div>
+
+<script src="live_app.js"></script>
+</body>
+</html>
