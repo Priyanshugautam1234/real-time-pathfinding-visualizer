@@ -93,15 +93,23 @@ This tool is ideal for:
 ---
 
 ## 🛠️ How to Run
--1️⃣ Start the WebSocket Server  python web_visualizer/live_server.py
--2️⃣ Open the Live UI  start web_visualizer/live.html
-### **3️⃣ Run the Visualizer**
--Select Algorithm → BFS / Dijkstra / A*
--Select Speed → Slow / Medium / Fast
--Press Connect WebSocket
--Press Start Live
 
+### **1️⃣ Start the WebSocket Server**
+Run this command:
+python web_visualizer/live_server.py
+
+### **2️⃣ Open the Live UI**
+- Open the UI:
+  start web_visualizer/live.html
+
+### **3️⃣ Run the Visualizer**  
+- Select **Algorithm** → BFS / Dijkstra / A*  
+- Select **Speed** → Slow / Medium / Fast  
+- Click **Connect WebSocket**  
+- Click **Start Live**
+    
 ---
+
 
 
 
