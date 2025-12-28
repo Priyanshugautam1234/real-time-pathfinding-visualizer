@@ -1,10 +1,10 @@
-# 🎮 Pathfinding Quest (Real-Time Visualizer)
+#  Pathfinding Quest (Real-Time Visualizer)
 
 A high-performance **C++ + WebSocket** powered pathfinding engine with a **Retro Arcade** real-time visualization using **HTML Canvas**.
 
 ---
 
-## 🔍 Overview
+##  Overview
 
 This project is an end-to-end real-time pathfinding visualizer that streams algorithm progress directly from a **C++ backend** to a **Retrowave Web UI** using WebSockets.
 
@@ -23,16 +23,16 @@ This tool is ideal for:
 
 ---
 
-## ✨ Features
+##  Features
 
-### 🧠 Algorithms Supported
+###  Algorithms Supported
 - **A\*** Pathfinding  
 - **Dijkstra’s** Algorithm  
 - **Breadth-First Search (BFS)**  
 
 ---
 
-## 🎥 Real-Time Visualization
+##  Real-Time Visualization
 - Live grid rendering via WebSocket frames  
 - **CRT Scanline** effects for retro vibe  
 - Smooth animations with auto-throttling  
@@ -40,7 +40,7 @@ This tool is ideal for:
 
 ---
 
-## ⚡ High-Performance C++ Engine
+## High-Performance C++ Engine
 - Fast grid computation  
 - Dynamic frame throttling  
 - No lag even at high frame rates  
@@ -48,7 +48,7 @@ This tool is ideal for:
 
 ---
 
-## 🎨 Retro Arcade UI
+##  Retro Arcade UI
 - **Pathfinding Quest** theme  
 - **Pixel-art fonts** ('Press Start 2P')  
 - **Mission Control** sidebar  
@@ -57,9 +57,9 @@ This tool is ideal for:
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
-### **🖥️ Backend (C++)**
+### ** Backend (C++)**
 - C++17  
 - Custom grid-based pathfinding engine  
 - Algorithms: BFS, Dijkstra, A*  
@@ -70,13 +70,13 @@ This tool is ideal for:
 - Robust non-blocking process management  
 - Live JSON frame streaming  
 
-### **🌐 Frontend**
+### ** Frontend**
 - HTML5 Canvas  
 - Vanilla JavaScript  
 - CSS3 (Flexbox, Grid, CRT Effects)  
 - Responsive Media Queries  
 
-### **🐍 Python Middleware**
+### ** Python Middleware**
 - Python 3 Asyncio Server  
 
 ---
